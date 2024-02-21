@@ -8,7 +8,7 @@ function App(){
     let [message, setMessage] = useState('Search for Music!');
     let [data, setData] = useState([]);
 
-    const API_URL = 'https://itunes.apple.com/search?term=the%20grateful%20dead';
+    const API_URL = 'https://itunes.apple.com/search?term=';
 
     useEffect(() =>{
       if (search){
