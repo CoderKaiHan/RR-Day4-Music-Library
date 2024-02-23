@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useContext } from 'react';
 import { SearchContext } from '../context/SearchContext';
 
