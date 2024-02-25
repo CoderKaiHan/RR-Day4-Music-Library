@@ -13,13 +13,13 @@ function GalleryItem(props) {
     
     const detailStyle = {
         'width': '80vw',
-        'height': '30vh',
+        'height': '500px',
         'border': '1px solid black',
         'margin': '2vh',
-        'backgroundImage': `url(${props.item.artworkUrl100})`,
-        'backgroundRepeat': 'no-repeat',
-        'backgroundSize': 'contain',
-        'backgroundPosition':'right',
+        // 'backgroundImage': `url(${props.item.artworkUrl100})`,
+        // 'backgroundRepeat': 'no-repeat',
+        // 'backgroundSize': 'contain',
+        // 'backgroundPosition': 'center',
         'color': 'orange'
     }    
 
@@ -48,6 +48,7 @@ function GalleryItem(props) {
                 </h3>
                 <h4>{props.item.primaryGenreName}</h4>
                 <h4>{props.item.releaseDate}</h4>
+                <img src={props.item.artworkUrl100} alt='' style={{width: '250px', height:'250px'}}/>
             </div>
         );
     }    

@@ -5,6 +5,7 @@ import Gallery from './components/Gallery';
 import SearchBar from './components/SearchBar';
 import AlbumView from './components/AlbumView';
 import ArtistView from './components/ArtistView';
+import SongView from './components/SongView';
 
 function App(){
     let [search, setSearch] = useState('');
@@ -36,7 +37,7 @@ function App(){
     }
 
     return (
-        <div>
+        <div className='App'>
           {message}
           <Router>
             <Routes>
@@ -48,6 +49,7 @@ function App(){
               }/>
               <Route path = '/album/:id' element={<AlbumView/>}/>
               <Route path='/artist/:id' element = {<ArtistView/>} />
+              <Route path='/song/:id' element = {<SongView/>} />
             </Routes>
           </Router>
         </div>

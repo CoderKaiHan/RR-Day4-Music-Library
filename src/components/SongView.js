@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 
-function ArtistView() {
+function SongView() {
     const navigate = useNavigate();
     const [ artistData, setArtistData ] = useState([]);
     const { id } = useParams();    
@@ -20,17 +20,17 @@ function ArtistView() {
         fetchData();
     },[id]);
     
-    const justAlbums = artistData.filter(entry => entry.collectionType === 'Album');
+    // const justAlbums = artistData.filter(entry => entry.collectionType === 'Album');
 
-    const renderAlbums = justAlbums.map((album, i) => {
-        return (
-            <div>
-                <Link to = {`/album/${album.collectionId}`}>
-                <p>{album.collectionName}</p>
-                </Link>
-            </div>
-        );
-    });
+    // const renderAlbums = justAlbums.map((album, i) => {
+    //     return (
+    //         <div>
+    //             <Link to = {`/album/${album.collectionId}`}>
+    //             <p>{album.collectionName}</p>
+    //             </Link>
+    //         </div>
+    //     );
+    // });
 
     const navButtons = () =>{
         return(
@@ -43,11 +43,11 @@ function ArtistView() {
 
     return (
         <div>
-            {artistData.length > 0 ? <h2>{artistData[0].artistName}</h2>:<h2>Loading</h2>}
+            {/* {artistData.length > 0 ? <h2>{artistData[0].artistName}</h2>:<h2>Loading</h2>} */}
             {navButtons()}
-            {renderAlbums}
+            {/* {renderAlbums} */}
         </div>
     )
 }
 
-export default ArtistView;
+export default SongView;
