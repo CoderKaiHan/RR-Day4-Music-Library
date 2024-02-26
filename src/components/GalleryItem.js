@@ -5,10 +5,11 @@ function GalleryItem(props) {
     let [view, setView] = useState(false);
 
     const simpleStyle = {
-        'width': '25vw',
-        'height': '20vh',
+        'width': '300px',
+        'height': '200px',
         'border': '1px solid black',
-        'margin': '1vw'
+        'margin': '30px',
+        'vertical-align':'top'
     }
     
     const detailStyle = {
@@ -20,7 +21,8 @@ function GalleryItem(props) {
         // 'backgroundRepeat': 'no-repeat',
         // 'backgroundSize': 'contain',
         // 'backgroundPosition': 'center',
-        'color': 'orange'
+        'color': 'orange',
+        'background-color':'teal'
     }    
 
     const simpleView = () => {
